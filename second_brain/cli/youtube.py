@@ -30,7 +30,7 @@ app = typer.Typer(
     no_args_is_help=True,
 )
 
-
+# To ingest the input
 @app.command()
 def ingest(
     url: str = typer.Argument(..., help="YouTube video URL"),
