@@ -1,0 +1,26 @@
+[project]
+name = "second-brain"
+version = "0.1.0"
+description = "Second Brain — YouTube Content Ingestor"
+readme = "README.md"
+requires-python = ">=3.10"  # yt-dlp minimum; your 3.12.3 satisfies
+license = "MIT"
+
+dependencies = [
+    "yt-dlp>=2025.12.08",    # Latest stable release (Dec 8, 2025)
+    "pydantic>=2.12.5",      # Latest v2.12 patch (Nov 26, 2025)
+    "typer[all]>=0.12.5",     # Latest release supporting rich (Dec 19, 2025 implied from activity)
+    "youtube-transcript-api>=0.6.2",
+    "openai-whisper>=20231117",
+    "torch>=2.0",
+]
+
+[project.scripts]
+second-brain = "second_brain.cli.youtube:app"
+
+[tool.setuptools.packages.find]
+include = ["cli", "second_brain", "logging_core", "content_ingestor"]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"

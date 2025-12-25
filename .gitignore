@@ -1,0 +1,28 @@
+# Python virtual env
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Build/dist
+build/
+dist/
+*.egg-info/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Logs/artifacts
+*.json
+artifacts/
+output/
+audio/
